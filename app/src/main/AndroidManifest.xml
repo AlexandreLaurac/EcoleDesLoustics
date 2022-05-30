@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EcoleLoustics">
         <activity
-            android:name=".MainActivity"
+            android:name=".ActivityJava.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,13 +18,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".HighTechItem"></activity>
-        <activity android:name=".HighTechItemAdapter"></activity>
-        <activity android:name=".ActivityMenu"></activity>
-        <activity android:name=".ActivityCultureGenerale"></activity>
-        <activity android:name=".ActivityMathematiques"></activity>
-        <activity android:name=".ActivityParcours"></activity>
-        <activity android:name=".ActivityInscription"></activity>
+        <activity android:name=".Model.HighTechItem"></activity>
+        <activity android:name=".Adapter.HighTechItemAdapter"></activity>
+        <activity android:name=".ActivityJava.ActivityMenu"></activity>
+        <activity android:name=".ActivityJava.ActivityCultureGenerale"></activity>
+        <activity android:name=".ActivityJava.ActivityMathematiques"></activity>
+        <activity android:name=".ActivityJava.ActivityParcours"></activity>
+        <activity android:name=".ActivityJava.ActivityInscription"></activity>
+
 
 
 
