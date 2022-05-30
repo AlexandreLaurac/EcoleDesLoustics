@@ -25,6 +25,8 @@
         <activity android:name=".ActivityJava.ActivityMathematiques"></activity>
         <activity android:name=".ActivityJava.ActivityParcours"></activity>
         <activity android:name=".ActivityJava.ActivityInscription"></activity>
+        <activity android:name=".ActivityJava.ActivityMultiplication"></activity>
+
 
 
 

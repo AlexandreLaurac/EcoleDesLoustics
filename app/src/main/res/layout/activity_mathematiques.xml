@@ -8,8 +8,64 @@
     android:orientation="vertical">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:id="@+id/titre_math_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="MATHEMATIQUES"
         />
+    <RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:layout_marginLeft="40dp"
+    >
+
+    <ImageButton
+        android:id="@+id/image_multipli"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_1x_mobiledata_24"
+
+        ></ImageButton>
+
+    <TextView
+        android:id="@+id/intit_multipli"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MULTIPLICATION"
+        android:layout_toRightOf="@+id/image_multipli"
+        android:layout_centerInParent="true"
+
+        ></TextView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="40dp"
+        >
+
+        <ImageButton
+            android:id="@+id/image_addi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_exposure_plus_2_24"
+
+            ></ImageButton>
+
+        <TextView
+            android:id="@+id/intit_addi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ADDITION"
+            android:layout_toRightOf="@+id/image_addi"
+            android:layout_centerInParent="true"
+
+            ></TextView>
+
+    </RelativeLayout>
+
+
 </LinearLayout>
