@@ -1,35 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivityInscription"
-    android:orientation="vertical">
+    tools:context=".ActivityJava.ActivityInscription">
 
 
     <TextView
-        android:id="@+id/inscrip_nom"
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nom"
-
+        android:text="Saisir vos information"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:textSize="25sp"
         ></TextView>
-    <TextView
-        android:id="@+id/inscrip_prenom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="prenom"
 
+    <TextView
+        android:id="@+id/view_lastname"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Nom:"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/title"
         ></TextView>
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name" />
+        android:inputType="text"
+        android:hint="saisir votre nom"
+        android:id="@+id/nom"
+        android:layout_below="@id/title"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/view_lastname"
+        ></EditText>
 
 
-</LinearLayout>
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Prenom:"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginTop="30dp"
+        android:id="@+id/view_firsname"
+        android:layout_below="@id/view_lastname"
+        ></TextView>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="saisir votre prenom"
+        android:id="@+id/prenom"
+        android:layout_below="@id/nom"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/view_firsname"
+        ></EditText>
+
+    <Button
+        android:id="@+id/bouton_valid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VALIDER"
+        android:layout_below="@id/view_firsname"
+        android:layout_toRightOf="@id/bouton_image"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:onClick="onMenu"
+        ></Button>
+    <Button
+        android:id="@+id/bouton_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CHOIX IMAGE"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="85dp"
+        android:layout_below="@id/view_firsname"
+        ></Button>
+
+</RelativeLayout>
