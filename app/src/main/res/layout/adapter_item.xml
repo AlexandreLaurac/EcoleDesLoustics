@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -11,19 +11,29 @@
         android:layout_height="wrap_content"
         android:src="@drawable/ic_baseline_accessibility_24"
         ></ImageView>
-
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onMenu"
+        >
     <TextView
         android:id="@+id/item_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/item_default_name"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+
         ></TextView>
 
     <TextView
         android:id="@+id/item_price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/item_default_price"
+        android:text="prenom par defaut"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/item_name"
+        android:layout_marginTop="5dp"
         ></TextView>
-
+    </RelativeLayout>
 </LinearLayout>
