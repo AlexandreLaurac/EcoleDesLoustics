@@ -52,6 +52,18 @@ public class TableAdditionActivity extends AppCompatActivity {
         }
     }
 
+    public boolean resultatsIncomplets () {
+        int taille = tableAddition.getAdditions().size() ;
+        for (int i = 0 ; i < taille ; i++) {
+            EditText resultat = resultats.get(i) ;
+            String reponseFournie =  resultat.getText().toString() ;
+            if (reponseFournie.isEmpty()) {
+                return true ;
+            }
+        }
+        return false ;
+    }
+
     public boolean resultatsCorrects () {
         nbErreurs = 0 ;
         boolean resultatComplet = true ;
@@ -69,6 +81,9 @@ public class TableAdditionActivity extends AppCompatActivity {
     }
     //methode pour verifier tous les champs sont complets
     public void tableAdditionValider (View view) {
+        if (resultatsIncomplets()) {
+            return ;
+        }
         if (resultatsCorrects()) {  // valeurs fournies correctes
             Intent intention = new Intent(TableAdditionActivity.this, FelicitationAdditionActivity.class);
             startActivity (intention) ;

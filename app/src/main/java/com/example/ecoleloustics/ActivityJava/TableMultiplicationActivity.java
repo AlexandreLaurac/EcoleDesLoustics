@@ -57,6 +57,20 @@ public class TableMultiplicationActivity extends AppCompatActivity {
         }
     }
 
+    public boolean resultatsIncomplets () {
+        int taille = tableMultiplication.getMultiplications().size() ;
+        for (int i = 0 ; i < taille ; i++) {
+            EditText resultat = resultats.get(i) ;
+            String reponseFournie =  resultat.getText().toString() ;
+            if (reponseFournie.isEmpty()) {
+                return true ;
+            }
+        }
+        return false ;
+    }
+
+
+
     public boolean resultatsCorrects () {
         nbErreurs = 0 ;
         boolean resultatComplet = true ;
@@ -74,6 +88,9 @@ public class TableMultiplicationActivity extends AppCompatActivity {
     }
 
     public void tableMultiplicationValider (View view) {
+        if (resultatsIncomplets()) {
+            return ;
+        }
         if (resultatsCorrects()) {  // valeurs fournies correctes
             Intent intention = new Intent(TableMultiplicationActivity.this, FelicitationActivity.class);
             startActivity (intention) ;
