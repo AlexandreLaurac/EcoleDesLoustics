@@ -1,11 +1,6 @@
 package com.example.ecoleloustics.ActivityJava;
 
-
-
 import static java.lang.Integer.parseInt;
-
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,18 +10,18 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.ecoleloustics.R;
 
 import java.util.ArrayList;
 
-
-
-
-public class TableMultiplicationActivity extends AppCompatActivity {
+public class TableAdditionActivity extends AppCompatActivity {
 
     public static final String TABLE_KEY = "table_key" ;
     public static final int ERREUR_REQUEST = 0 ;
-    private TableMultiplication tableMultiplication ;
+    private TableAddition tableAddition ;
     private ArrayList<EditText> resultats ;
     private int nbErreurs ;
 
@@ -39,14 +34,14 @@ public class TableMultiplicationActivity extends AppCompatActivity {
         LinearLayout disposition = findViewById (R.id.disposition) ;
         // Différentes lignes contenant chacune un produit de la table choisie
         int table = getIntent().getIntExtra(TABLE_KEY,1) ;
-        tableMultiplication =  new TableMultiplication (table) ;
+        tableAddition =  new TableAddition (table) ;
         resultats = new ArrayList<>() ;
-        for (Multiplication multiplication : tableMultiplication.getMultiplications()) {
+        for (Addition addition : tableAddition.getAdditions()) {
             // Création d'une ligne de calcul
             LinearLayout ligneTemp = (LinearLayout) getLayoutInflater().inflate(R.layout.template_calcul, null);
             // TextView pour l'affichage du calcul à effectuer
             TextView calcul = ligneTemp.findViewById(R.id.template_calcul) ;
-            String texteCalcul = multiplication.getOperande1() + " x " + multiplication.getOperande2() + " = " ;
+            String texteCalcul = addition.getOperande1() + " + " + addition.getOperande2() + " = " ;
             calcul.setText(texteCalcul) ;
             // EditText pour la saisie du résultat
             EditText resultat = ligneTemp.findViewById(R.id.template_resultat) ;
@@ -60,12 +55,12 @@ public class TableMultiplicationActivity extends AppCompatActivity {
     public boolean resultatsCorrects () {
         nbErreurs = 0 ;
         boolean resultatComplet = true ;
-        int taille = tableMultiplication.getMultiplications().size() ;
+        int taille = tableAddition.getAdditions().size() ;
         for (int i = 1 ; i < taille ; i++) {
-            Multiplication multiplication = tableMultiplication.getMultiplications().get(i) ;
+            Addition addition = tableAddition.getAdditions().get(i) ;
             EditText resultat = resultats.get(i) ;
             int reponseFournie =  parseInt (resultat.getText().toString()) ;
-            if (reponseFournie != multiplication.getProduit()) {
+            if (reponseFournie != addition.getProduit()) {
                 resultatComplet = false;
                 nbErreurs++ ;
             }
@@ -73,12 +68,12 @@ public class TableMultiplicationActivity extends AppCompatActivity {
         return resultatComplet ;
     }
 
-    public void tableMultiplicationValider (View view) {
+    public void tableAdditionValider (View view) {
         if (resultatsCorrects()) {  // valeurs fournies correctes
-            Intent intention = new Intent(TableMultiplicationActivity.this, FelicitationActivity.class);
+            Intent intention = new Intent(TableAdditionActivity.this, FelicitationAdditionActivity.class);
             startActivity (intention) ;
         } else {                    // valeurs entrées erronées
-            Intent intention = new Intent(TableMultiplicationActivity.this, ErreurActivity.class);
+            Intent intention = new Intent(TableAdditionActivity.this, ErreurAdditionActivity.class);
             intention.putExtra(ErreurActivity.ERREUR_KEY, nbErreurs) ;
             startActivityForResult (intention, ERREUR_REQUEST) ;
         }
@@ -99,4 +94,6 @@ public class TableMultiplicationActivity extends AppCompatActivity {
             }
         }
     }
+
+
 }

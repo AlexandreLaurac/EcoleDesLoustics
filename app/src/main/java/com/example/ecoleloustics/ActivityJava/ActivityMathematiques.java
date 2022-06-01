@@ -33,6 +33,16 @@ public class ActivityMathematiques extends AppCompatActivity{
         startActivity(activityMultiplication);
     }
 
+    public void onAddition(View view) {
+
+        // Création d'une intention
+        Intent activityAddition= new Intent(ActivityMathematiques.this, ActivityAddition.class);
+
+        // Lancement de la demande de changement d'activité
+        startActivity(activityAddition);
+    }
+
+
 
 
 

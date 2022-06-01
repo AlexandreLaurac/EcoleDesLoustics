@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
         // get listview
 
-        ListView shopListView = findViewById(R.id.shop_list_view);
+        ListView shopListView = findViewById(R.id.user_list_view);
         shopListView.setAdapter(new UtilisateurAdapter(this,utilisateurList));
     }
 

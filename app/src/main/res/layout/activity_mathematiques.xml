@@ -26,7 +26,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_baseline_1x_mobiledata_24"
-
         ></ImageButton>
 
     <TextView
@@ -36,7 +35,6 @@
         android:text="MULTIPLICATION"
         android:layout_toRightOf="@+id/image_multipli"
         android:layout_centerInParent="true"
-
         ></TextView>
 
     </RelativeLayout>
@@ -53,7 +51,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_baseline_exposure_plus_2_24"
-
+            android:onClick="onAddition"
             ></ImageButton>
 
         <TextView
@@ -63,7 +61,6 @@
             android:text="ADDITION"
             android:layout_toRightOf="@+id/image_addi"
             android:layout_centerInParent="true"
-
             ></TextView>
 
     </RelativeLayout>

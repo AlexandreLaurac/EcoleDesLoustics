@@ -32,6 +32,12 @@
         <activity android:name=".ActivityJava.Multiplication"></activity>
         <activity android:name=".ActivityJava.ErreurActivity"></activity>
         <activity android:name=".ActivityJava.FelicitationActivity"></activity>
+        <activity android:name=".ActivityJava.ActivityAddition"></activity>
+        <activity android:name=".ActivityJava.TableAdditionActivity"></activity>
+        <activity android:name=".ActivityJava.TableAddition"></activity>
+        <activity android:name=".ActivityJava.Addition"></activity>
+        <activity android:name=".ActivityJava.FelicitationAdditionActivity"></activity>
+        <activity android:name=".ActivityJava.ErreurAdditionActivity"></activity>
 
 
 

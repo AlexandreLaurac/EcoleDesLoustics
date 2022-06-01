@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivityJava.FelicitationActivity"
+    tools:context=".ActivityJava.ErreurAdditionActivity"
     android:orientation="vertical">
 
     <TextView
@@ -12,19 +12,22 @@
         android:layout_height="50dp"
         android:gravity="center"
         android:textSize="28sp"
-        android:textColor="#008000"
-        android:text="Toutes mes félicitations"/>
+        android:textColor="#f00020 "
+        android:text="Le resultat"/>
 
     <TextView
+        android:id="@+id/erreur_addition_NombreErreurs"
         android:layout_width="match_parent"
-        android:layout_height="40dp"/>
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="erreur2"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Refaire une table?"
-        android:onClick="felicitationChoisirTable"></Button>
+        android:text="Corriger vos erreurs"
+        android:onClick="erreurCorrigerErreurs"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -34,7 +37,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Choix d'un autre exercice"
-        android:onClick="felicitationChoisirExercice"></Button>
+        android:text="Refaire une table?"
+        android:onClick="erreurChoisirTable"/>
 
 </LinearLayout>
