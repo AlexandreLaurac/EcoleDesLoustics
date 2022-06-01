@@ -27,11 +27,14 @@ public class ActivityMathematiques extends AppCompatActivity{
     public void onMultiplication(View view) {
 
         // Création d'une intention
-        Intent activityMultiplication= new Intent(ActivityMathematiques.this, ActivityMultiplication.class);
+        Intent activityMultiplication= new Intent(ActivityMathematiques.this, Exercice5Activity.class);
 
         // Lancement de la demande de changement d'activité
         startActivity(activityMultiplication);
     }
+
+
+
 
 
 }

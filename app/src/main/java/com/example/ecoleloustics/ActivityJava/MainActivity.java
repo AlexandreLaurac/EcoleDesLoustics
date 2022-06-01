@@ -7,8 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
 
-import com.example.ecoleloustics.Adapter.HighTechItemAdapter;
-import com.example.ecoleloustics.Model.HighTechItem;
+import com.example.ecoleloustics.Adapter.UtilisateurAdapter;
+
+import com.example.ecoleloustics.Model.Utilisateur;
 import com.example.ecoleloustics.R;
 
 import java.util.ArrayList;
@@ -23,16 +24,16 @@ public class MainActivity extends AppCompatActivity {
 
         //liste des items
 
-        List<HighTechItem> highTechItemList = new ArrayList<>();
+        List<Utilisateur> utilisateurList = new ArrayList<>();
 
-        highTechItemList.add(new HighTechItem("Baldo", "Jerome"));
-        highTechItemList.add(new HighTechItem("Laurac", "Alexandre"));
-        highTechItemList.add(new HighTechItem("Bourgeaud", "Corentin"));
+        utilisateurList.add(new Utilisateur("Baldo", "Jerome"));
+        utilisateurList.add(new Utilisateur("Laurac", "Alexandre"));
+        utilisateurList.add(new Utilisateur("Bourgeaud", "Corentin"));
 
         // get listview
 
         ListView shopListView = findViewById(R.id.shop_list_view);
-        shopListView.setAdapter(new HighTechItemAdapter(this,highTechItemList));
+        shopListView.setAdapter(new UtilisateurAdapter(this,utilisateurList));
     }
 
     public void onMenu(View view) {

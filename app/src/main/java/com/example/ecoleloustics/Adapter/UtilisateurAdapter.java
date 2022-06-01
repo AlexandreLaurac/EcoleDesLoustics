@@ -6,20 +6,21 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.example.ecoleloustics.Model.HighTechItem;
+import com.example.ecoleloustics.Model.Utilisateur;
+
 import com.example.ecoleloustics.R;
 
 import java.util.List;
 
-public class HighTechItemAdapter extends BaseAdapter{
+public class UtilisateurAdapter extends BaseAdapter{
     
     private Context context;
-    private List<HighTechItem> highTechItemList;
+    private List<Utilisateur> utilisateurList;
     //private LayoutInflater inflater;
 
-    public HighTechItemAdapter(Context context, List<HighTechItem> highTechItemList) {
+    public UtilisateurAdapter(Context context, List<Utilisateur> utilisateurList) {
         this.context = context;
-        this.highTechItemList = highTechItemList;
+        this.utilisateurList = utilisateurList;
         //this.inflater = LayoutInflater.from(context);
     }
 
@@ -27,12 +28,12 @@ public class HighTechItemAdapter extends BaseAdapter{
 
     @Override
     public int getCount() {
-        return highTechItemList.size();
+        return utilisateurList.size();
     }
 
     @Override
-    public HighTechItem getItem(int position) {
-        return highTechItemList.get(position);
+    public Utilisateur getItem(int position) {
+        return utilisateurList.get(position);
     }
 
     @Override
@@ -49,7 +50,7 @@ public class HighTechItemAdapter extends BaseAdapter{
 
 
 
-        HighTechItem currentItem = getItem(i);
+        Utilisateur currentItem = getItem(i);
         String itemNom= currentItem.getName();
         String itemPrenom = currentItem.getPrenom();
 

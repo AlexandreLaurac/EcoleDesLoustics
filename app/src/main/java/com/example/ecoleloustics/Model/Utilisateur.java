@@ -1,6 +1,6 @@
 package com.example.ecoleloustics.Model;
 
-public class HighTechItem {
+public class Utilisateur {
 
     //attributs
 
@@ -10,7 +10,7 @@ public class HighTechItem {
     //constructeurs
 
 
-    public HighTechItem(String name, String prenom) {
+    public Utilisateur(String name, String prenom) {
         this.name = name;
         this.prenom = prenom;
     }
