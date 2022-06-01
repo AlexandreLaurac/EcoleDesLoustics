@@ -31,7 +31,7 @@ public class ErreurAdditionActivity extends AppCompatActivity {
     }
 
     public void erreurChoisirTable (View view) {
-        Intent intention = new Intent(ErreurAdditionActivity.this, TableAdditionActivity.class) ;
+        Intent intention = new Intent(ErreurAdditionActivity.this, ActivityAddition.class) ;
         intention.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP) ;
         startActivity (intention) ;
     }

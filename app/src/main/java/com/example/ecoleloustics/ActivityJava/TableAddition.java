@@ -12,7 +12,7 @@ public class TableAddition {
     public TableAddition(int table) {
         this.table = table;
 
-        // Initialisation de l'attribut multiplications
+        // Initialisation de l'attribut additions
         additions = new ArrayList<>();
         for (int i = 1; i <= 9; i++) {
             Addition temp = new Addition(i, table);

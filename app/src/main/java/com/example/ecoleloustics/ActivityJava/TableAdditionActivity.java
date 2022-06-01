@@ -28,11 +28,11 @@ public class TableAdditionActivity extends AppCompatActivity {
     @Override
     protected void onCreate (Bundle savedInstanceState) {
         super.onCreate(savedInstanceState) ;
-        setContentView (R.layout.activity_table_multiplication) ;
+        setContentView (R.layout.activity_table_addition) ;
 
         // Layout
         LinearLayout disposition = findViewById (R.id.disposition) ;
-        // Différentes lignes contenant chacune un produit de la table choisie
+        // Différentes lignes contenant chacune une addition de la table choisie
         int table = getIntent().getIntExtra(TABLE_KEY,1) ;
         tableAddition =  new TableAddition (table) ;
         resultats = new ArrayList<>() ;
@@ -56,18 +56,18 @@ public class TableAdditionActivity extends AppCompatActivity {
         nbErreurs = 0 ;
         boolean resultatComplet = true ;
         int taille = tableAddition.getAdditions().size() ;
-        for (int i = 1 ; i < taille ; i++) {
+        for (int i = 0 ; i < taille ; i++) {
             Addition addition = tableAddition.getAdditions().get(i) ;
             EditText resultat = resultats.get(i) ;
             int reponseFournie =  parseInt (resultat.getText().toString()) ;
-            if (reponseFournie != addition.getProduit()) {
+            if (reponseFournie != addition.getSomme()) {
                 resultatComplet = false;
                 nbErreurs++ ;
             }
         }
         return resultatComplet ;
     }
-
+    //methode pour verifier tous les champs sont complets
     public void tableAdditionValider (View view) {
         if (resultatsCorrects()) {  // valeurs fournies correctes
             Intent intention = new Intent(TableAdditionActivity.this, FelicitationAdditionActivity.class);

@@ -61,7 +61,7 @@ public class TableMultiplicationActivity extends AppCompatActivity {
         nbErreurs = 0 ;
         boolean resultatComplet = true ;
         int taille = tableMultiplication.getMultiplications().size() ;
-        for (int i = 1 ; i < taille ; i++) {
+        for (int i = 0 ; i < taille ; i++) {
             Multiplication multiplication = tableMultiplication.getMultiplications().get(i) ;
             EditText resultat = resultats.get(i) ;
             int reponseFournie =  parseInt (resultat.getText().toString()) ;
