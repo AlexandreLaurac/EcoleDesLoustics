@@ -7,10 +7,10 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-import java.util.List;
-
 import com.example.ecoleloustics.Model.db.User;
 import com.example.ecoleloustics.R;
+
+import java.util.List;
 
 
 public class UsersAdapter extends ArrayAdapter<User> {

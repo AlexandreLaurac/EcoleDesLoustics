@@ -18,8 +18,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Model.Utilisateur"></activity>
-        <activity android:name=".Adapter.UtilisateurAdapter"></activity>
+        <activity android:name=".ActivityJava.ActivityConnexion"></activity>
         <activity android:name=".ActivityJava.ActivityMenu"></activity>
         <activity android:name=".ActivityJava.ActivityCultureGenerale"></activity>
         <activity android:name=".ActivityJava.ActivityMathematiques"></activity>
