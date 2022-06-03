@@ -12,6 +12,7 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.ecoleloustics.MonApplication;
 import com.example.ecoleloustics.Adapter.UsersAdapter;
 import com.example.ecoleloustics.Model.db.DatabaseClient;
 import com.example.ecoleloustics.Model.db.User;
@@ -66,6 +67,7 @@ public class ActivityConnexion extends AppCompatActivity {
 
                 // Récupération de l'utilisateur cliqué à l'aide de l'adapter
                 User user = adapter.getItem(position);
+                ((MonApplication) ActivityConnexion.this.getApplication()).setUserCourant(user) ;
 
                 // Message
                 //Toast.makeText(ActivityConnexion.this, "Click : " + user.getPrenom(), Toast.LENGTH_SHORT).show();

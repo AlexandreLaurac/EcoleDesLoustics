@@ -1,12 +1,15 @@
 package com.example.ecoleloustics.ActivityJava;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import android.content.Intent;
-import android.view.View;
 
+import com.example.ecoleloustics.MonApplication;
 import com.example.ecoleloustics.R;
+
 
 public class ActivityMenu extends AppCompatActivity {
 
@@ -17,6 +20,11 @@ public class ActivityMenu extends AppCompatActivity {
         // On charge le XML pour créer l'arbre graphique
         setContentView(R.layout.activity_menu);
 
+        // Récupération du prénom de l'utilisateur courant et affichage d'un message de bienvenue adapté
+        String prenom = ((MonApplication) this.getApplication()).getUserCourant().getPrenom() ;
+        TextView messageIntro = (TextView) findViewById (R.id.menu_messageIntro) ;
+        String message = "Bonjour " + prenom + " !" ;
+        messageIntro.setText(message) ;
     }
 
     public void onParcours(View view) {
