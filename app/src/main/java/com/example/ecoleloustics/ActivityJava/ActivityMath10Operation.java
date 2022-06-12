@@ -77,7 +77,7 @@ public class ActivityMath10Operation extends AppCompatActivity {
         String resultatS = resultatView.getText().toString().trim();
 
         if (resultatS.isEmpty()){
-            Toast.makeText(getApplicationContext(), "N'oublies pas ton résultat !!", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "N'oublies pas ton résultat !!", Toast.LENGTH_SHORT).show();
         }
 
         else if (compteur < 10) {
@@ -122,12 +122,12 @@ public class ActivityMath10Operation extends AppCompatActivity {
         if(calculMental.getOperation() == result){
             repJuste++;
             //verifView.setText("OK" + " et réponse juste =  " +repJuste);
-            Toast.makeText(getApplicationContext(), "REPONSE BONNE!!" , Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "REPONSE BONNE!!" , Toast.LENGTH_SHORT).show();
         }
         else
         {
             //verifView.setText("KO");
-            Toast.makeText(getApplicationContext(), "REPONSE FAUSSE!!\nLe bon résultat était :  " + calculMental.getOperation(), Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "REPONSE FAUSSE!!\nLe bon résultat était :  " + calculMental.getOperation(), Toast.LENGTH_SHORT).show();
         }
 
     }

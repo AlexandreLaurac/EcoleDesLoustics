@@ -45,6 +45,7 @@
         <activity android:name=".ActivityJava.ActivityMath10Operation"/>
         <activity android:name=".ActivityJava.ActivityMath10OperationResultat"/>
         <activity android:name=".ActivityJava.ActivityMathCalculMentalOp"/>
+        <activity android:name=".ActivityJava.ActivityMathCalculMentalResultat"/>
         <activity android:name=".ActivityJava.CalculMental"/>
         <activity android:name=".ActivityJava.ActivityMathCalculMentalOpResult"/>
 

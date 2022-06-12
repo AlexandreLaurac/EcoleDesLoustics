@@ -19,7 +19,7 @@
         android:id="@+id/math_calcul_mental_explic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TEXTE EXPLCICATIF DU CALCUL MENTAL"
+        android:text="TEXTE EXPLICATIF DU CALCUL MENTAL"
         android:textSize="30dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="40dp"
