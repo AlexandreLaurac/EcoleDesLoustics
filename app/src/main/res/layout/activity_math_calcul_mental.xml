@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityJava.ActivityMathCalculMental"
+    >
+    <TextView
+        android:id="@+id/math_calcul_mental_titre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:layout_marginLeft="10dp"
+        android:text="CALCUL MENTAL"
+        android:layout_centerHorizontal="true"
+        ></TextView>
+
+    <TextView
+        android:id="@+id/math_calcul_mental_explic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TEXTE EXPLCICATIF DU CALCUL MENTAL"
+        android:textSize="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/math_calcul_mental_titre"
+        ></TextView>
+    <RelativeLayout
+        android:id="@+id/math_calcul_mental_choix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/math_calcul_mental_explic"
+        >
+        <Button
+            android:id="@+id/math_calcul_mental_addi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="addition"
+            android:onClick="onAddition"
+            ></Button>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="multi"
+            android:layout_toRightOf="@id/math_calcul_mental_addi"
+            android:layout_marginLeft="10dp"
+            android:onClick="onMultiplication"
+            ></Button>
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

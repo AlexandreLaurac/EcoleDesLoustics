@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityJava.ActivityMath10Operation"
+    >
+    <TextView
+        android:id="@+id/math_10_ope_type_op"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:layout_marginLeft="10dp"
+        android:text="type operation"
+        android:layout_centerHorizontal="true"
+        ></TextView>
+
+    <TextView
+        android:id="@+id/math_10_ope_compteur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="/10"
+        android:textSize="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/math_10_ope_type_op"
+        ></TextView>
+
+    <RelativeLayout
+        android:id="@+id/ensembOpe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/math_10_ope_compteur"
+        >
+
+        <TextView
+            android:id="@+id/math_10_ope_first_op"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:layout_marginLeft="60dp"
+            android:text=""
+            android:layout_alignBaseline="@id/math_10_ope_resultat"
+            ></TextView>
+
+
+        <TextView
+            android:id="@+id/math_10_ope_operator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" + "
+            android:textSize="30dp"
+            android:layout_toRightOf="@id/math_10_ope_first_op"
+            android:layout_alignBaseline="@id/math_10_ope_resultat"
+            ></TextView>
+
+        <TextView
+            android:id="@+id/math_10_ope_second_op"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="30dp"
+            android:layout_toRightOf="@id/math_10_ope_operator"
+            android:layout_alignBaseline="@id/math_10_ope_resultat"
+            ></TextView>
+
+        <TextView
+            android:id="@+id/math_10_ope_egal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" = "
+            android:textSize="30dp"
+            android:layout_toRightOf="@id/math_10_ope_second_op"
+            android:layout_centerInParent="true"
+            ></TextView>
+        <EditText
+            android:id="@+id/math_10_ope_resultat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="\?"
+            android:inputType="number"
+            android:textSize="25sp"
+            android:layout_toRightOf="@+id/math_10_ope_egal"
+            ></EditText>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/valider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VALIDER"
+        android:layout_below="@+id/ensembOpe"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClick"
+        ></Button>
+    <TextView
+        android:id="@+id/verification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="30dp"
+        android:layout_below="@id/valider"
+        android:layout_centerHorizontal="true"
+        ></TextView>
+
+</RelativeLayout>

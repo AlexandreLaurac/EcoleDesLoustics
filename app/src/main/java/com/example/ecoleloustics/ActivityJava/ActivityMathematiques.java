@@ -24,22 +24,26 @@ public class ActivityMathematiques extends AppCompatActivity{
 
     }
 
-    public void onMultiplication(View view) {
+    //codeOperator 1 pour les additions
+    public void on10Addition(View view) {
+        int codeOperator = 1;
 
-        // Création d'une intention
-        Intent activityMultiplication= new Intent(ActivityMathematiques.this, Exercice5Activity.class);
+        Intent activity10Operation = new Intent(ActivityMathematiques.this, ActivityMath10Operation.class);
+        activity10Operation.putExtra(ActivityMath10Operation.RESULT_KEY, codeOperator);
+        startActivity(activity10Operation);
+    }
+    //codeOperator 2 pour les multiplications
+    public void on10Multiplication(View view) {
+        int codeOperator = 2;
 
-        // Lancement de la demande de changement d'activité
-        startActivity(activityMultiplication);
+        Intent activity10Operation = new Intent(ActivityMathematiques.this, ActivityMath10Operation.class);
+        activity10Operation.putExtra(ActivityMath10Operation.RESULT_KEY, codeOperator);
+        startActivity(activity10Operation);
     }
 
-    public void onAddition(View view) {
-
-        // Création d'une intention
-        Intent activityAddition= new Intent(ActivityMathematiques.this, ActivityAddition.class);
-
-        // Lancement de la demande de changement d'activité
-        startActivity(activityAddition);
+    public void onCalculMental(View view) {
+        Intent activityCalculMental = new Intent(ActivityMathematiques.this, ActivityMathCalculMental.class);
+        startActivity(activityCalculMental);
     }
 
 
