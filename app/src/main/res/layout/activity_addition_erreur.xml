@@ -13,7 +13,7 @@
         android:gravity="center"
         android:textSize="28sp"
         android:textColor="#f00020 "
-        android:text="Le resultat"/>
+        android:text="L'exercice n'est pas réussie"/>
 
     <TextView
         android:id="@+id/erreur_addition_NombreErreurs"
