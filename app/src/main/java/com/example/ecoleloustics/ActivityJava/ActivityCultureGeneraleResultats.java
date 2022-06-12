@@ -26,10 +26,25 @@ public class ActivityCultureGeneraleResultats extends AppCompatActivity {
         int nbBonnesReponses = getIntent().getIntExtra(NBREPONSES,1) ;
         int nbQuestions = getIntent().getIntExtra(NBQUESTIONS, 10) ;
         TextView cultureGeneraleResultats_texteResultat = (TextView) findViewById(R.id.cultureGeneraleResultats_texteResultat) ;
-        if (nbBonnesReponses != nbQuestions) {
-            String texte = "Tu as obtenu " + nbBonnesReponses + " sur " + nbQuestions ;
+        TextView cultureGeneraleResultats_texteEncouragement = (TextView) findViewById(R.id.cultureGeneraleResultats_texteEncouragement) ;
+        String texte = "Tu as donné " + nbBonnesReponses + " bonnes réponses sur " + nbQuestions ;
+        cultureGeneraleResultats_texteResultat.setText(texte) ;
+        String texteEncouragement ;
+        if (nbBonnesReponses < 5) {
+            texteEncouragement = "Poursuis tes efforts" ;
+        }
+        else if (nbBonnesReponses < 7) {
+            texteEncouragement = "C'est pas mal" ;
+        }
+        else if (nbBonnesReponses < 9) {
+            texteEncouragement = "Félicitations !" ;
+        }
+        else {
+            texteEncouragement = "Tu es un as !" ;
+            texte = "Tu as donné toutes les bonnes réponses !" ;
             cultureGeneraleResultats_texteResultat.setText(texte) ;
         }
+        cultureGeneraleResultats_texteEncouragement.setText(texteEncouragement) ;
     }
 
     public void AutreTheme (View view) {

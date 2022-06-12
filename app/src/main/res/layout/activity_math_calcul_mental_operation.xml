@@ -3,40 +3,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivityJava.ActivityMathCalculMentalOp"
-    >
+    tools:context=".ActivityJava.ActivityMathCalculMentalOp">
 
     <TextView
         android:id="@+id/math_mental_type_op"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="30dp"
-        android:layout_marginLeft="10dp"
-        android:text="type operation"
         android:layout_centerHorizontal="true"
-        ></TextView>
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="type operation"
+        android:textSize="25dp" />
 
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:textSize="40dp"
+        android:layout_height="wrap_content"
+        android:text="60"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/math_mental_type_op"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+
+        ></TextView>
     <TextView
         android:id="@+id/math_mental_compteur"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="10 justes"
-        android:textSize="30dp"
+        android:text="Nombre de calculs corrects : 0"
+        android:textSize="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="40dp"
         android:layout_marginLeft="50dp"
-        android:layout_below="@id/math_mental_type_op"
+        android:layout_below="@id/time"
+        android:layout_centerHorizontal="true"
         ></TextView>
-    <TextView
-        android:id="@+id/time"
-        android:layout_width="wrap_content"
-        android:textSize="30dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/math_mental_type_op"
-        android:layout_marginLeft="15dp"
-        android:layout_toRightOf="@id/math_mental_compteur"
-        android:layout_alignBaseline="@id/math_mental_compteur"
-        ></TextView>
+
 <!--
     <Chronometer
         android:id="@+id/chrono"
@@ -53,7 +56,7 @@
         android:id="@+id/ensembOpe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
+        android:layout_centerHorizontal="true"
         android:layout_below="@id/math_mental_compteur"
         >
 
@@ -72,11 +75,10 @@
             android:id="@+id/math_mental_operator"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" + "
-            android:textSize="30dp"
-            android:layout_toRightOf="@id/math_mental_first_op"
             android:layout_alignBaseline="@id/math_mental_resultat"
-            ></TextView>
+            android:layout_toRightOf="@id/math_mental_first_op"
+            android:text=" + "
+            android:textSize="30dp"></TextView>
 
         <TextView
             android:id="@+id/math_mental_second_op"
@@ -113,18 +115,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="VALIDER"
+        android:layout_marginTop="20dp"
         android:layout_below="@+id/ensembOpe"
         android:layout_centerHorizontal="true"
         android:onClick="onClick"
         ></Button>
-    <TextView
-        android:id="@+id/math_calcul_mental_vide"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/math_calcul_mental_valider"
-        android:text=""
-        android:textSize="30dp"
-        android:layout_centerHorizontal="true"
-        ></TextView>
+
 
 </RelativeLayout>

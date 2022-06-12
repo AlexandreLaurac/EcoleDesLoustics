@@ -21,22 +21,43 @@ public class ActivityMath10OperationResultat extends AppCompatActivity {
         int nbrJuste = getIntent().getIntExtra(RESULT_KEY, 0);
         TextView avisView = (TextView) findViewById(R.id.math_10_ope_result_avis1);
         TextView resultView = (TextView) findViewById(R.id.math_10_ope_result_resultats);
-        String resultS = nbrJuste + " réponses justes";
-        resultView.setText(resultS);
-        if(nbrJuste == 10){
-            String message = "Félicitation tu as  tout  juste !! ";
-            avisView.setText(message);
-        }
-        else{
-            String message = "Encore quelques efforts ! Recommences l'exercice ! ";
-            avisView.setText(message);
-            Button button = (Button) findViewById(R.id.math_10_ope_result_changer);
-            button.setVisibility(View.INVISIBLE);
-        }
-    }
-    public void onRefaireExo(View view){
+        String resultS = "Tu as donné " + nbrJuste + " bonnes réponses sur 10" ;
+        resultView.setText(resultS) ;
 
-        Intent intent = new Intent(ActivityMath10OperationResultat.this, MainActivity.class);
+        String texteEncouragement ;
+        if (nbrJuste < 5) {
+            texteEncouragement = "Poursuis tes efforts" ;
+        }
+        else if (nbrJuste < 7) {
+            texteEncouragement = "C'est pas mal" ;
+        }
+        else if (nbrJuste < 9) {
+            texteEncouragement = "Félicitations !" ;
+        }
+        else {
+            texteEncouragement = "Tu es un as !" ;
+            resultS = "Tu as donné toutes les bonnes réponses !" ;
+            resultView.setText(resultS) ;
+        }
+        avisView.setText(texteEncouragement) ;
+
+    }
+
+    public void onRefaireExo(View view) {
+        Intent intent = new Intent(ActivityMath10OperationResultat.this, ActivityMath10Operation.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP) ;
+        startActivity(intent);
+    }
+
+    public void onAutreExerciceMaths(View view) {
+        Intent intent = new Intent(ActivityMath10OperationResultat.this, ActivityMathematiques.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP) ;
+        startActivity(intent);
+    }
+
+    public void onMenuPrincipal(View view) {
+        Intent intent = new Intent(ActivityMath10OperationResultat.this, ActivityMenu.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP) ;
         startActivity(intent);
     }
 

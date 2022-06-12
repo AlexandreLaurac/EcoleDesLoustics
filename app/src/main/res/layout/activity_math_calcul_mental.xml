@@ -11,21 +11,25 @@
         android:layout_height="wrap_content"
         android:textSize="30dp"
         android:layout_marginLeft="10dp"
-        android:text="CALCUL MENTAL"
-        android:layout_centerHorizontal="true"
-        ></TextView>
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        android:text="Activité de calcul mental"
+        android:layout_centerHorizontal="true"/>
 
     <TextView
         android:id="@+id/math_calcul_mental_explic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TEXTE EXPLICATIF DU CALCUL MENTAL"
-        android:textSize="30dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="40dp"
-        android:layout_centerHorizontal="true"
         android:layout_below="@id/math_calcul_mental_titre"
-        ></TextView>
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="40dp"
+        android:text="Tu dois réaliser le maximum d'opérations de calcul mental en une minute. Choisis un type d'opération ci-dessous et l'activité commencera immédiatement après !"
+        android:textSize="20dp"></TextView>
     <RelativeLayout
         android:id="@+id/math_calcul_mental_choix"
         android:layout_width="wrap_content"
@@ -35,16 +39,18 @@
         >
         <Button
             android:id="@+id/math_calcul_mental_addi"
-            android:layout_width="wrap_content"
+            android:layout_width="250dp"
+            android:layout_centerHorizontal="true"
             android:layout_height="wrap_content"
             android:text="addition"
             android:onClick="onAddition"
             ></Button>
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:text="multi"
-            android:layout_toRightOf="@id/math_calcul_mental_addi"
+            android:layout_centerHorizontal="true"
+            android:text="multiplication"
+            android:layout_below="@id/math_calcul_mental_addi"
             android:layout_marginLeft="10dp"
             android:onClick="onMultiplication"
             ></Button>

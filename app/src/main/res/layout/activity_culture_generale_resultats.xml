@@ -7,37 +7,40 @@
     android:orientation="vertical">
 
     <TextView
+        android:id="@+id/cultureGeneraleResultats_texteResultat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:text="Tu as donné"/>
+
+    <TextView
+        android:id="@+id/cultureGeneraleResultats_texteEncouragement"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:textSize="40sp"
+        android:textSize="35sp"
         android:text="Félicitations !"/>
 
     <TextView
-        android:id="@+id/cultureGeneraleResultats_texteResultat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="40dp"
         android:layout_marginTop="20dp"
         android:textSize="25sp"
         android:gravity="center"
-        android:text="Tu as donné toutes les bonnes réponses"/>
+        android:text="Clique sur l'un des boutons suivants pour continuer"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="62dp"
-        android:layout_marginTop="20dp"
-        android:textSize="25sp"
-        android:gravity="center"
-        android:text="Tu peux t'entrainer encore ou changer d'exercice "/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         android:text="Autre thème de culture générale"
         android:onClick="AutreTheme" />
 
@@ -45,7 +48,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:text="Retour au menu principal"
         android:onClick="MenuPrincipal" />
 

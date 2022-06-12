@@ -3,6 +3,7 @@ package com.example.ecoleloustics.ActivityJava;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -34,6 +35,10 @@ public class ActivityMenu extends AppCompatActivity {
         TextView messageIntro = (TextView) findViewById (R.id.menu_messageIntro) ;
         String message = "Bonjour " + prenom + " !" ;
         messageIntro.setText(message) ;
+
+        // On cache le bouton parcours, fonctionnalité non mise en oeuvre faute de temps
+        Button button = (Button) findViewById(R.id.menu_parcours) ;
+        button.setVisibility(View.INVISIBLE) ;
     }
 
     public void onParcours(View view) {

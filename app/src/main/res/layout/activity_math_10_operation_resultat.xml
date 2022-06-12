@@ -3,35 +3,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivityJava.ActivityMath10Operation"
-    >
+    tools:context=".ActivityJava.ActivityMath10OperationResultat">
 
     <TextView
         android:id="@+id/math_10_ope_result_avis1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="page resultat"
+        android:text="encouragements"
+        android:textSize="35sp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
-        ></TextView>
+        android:layout_marginTop="40dp"/>
 
     <TextView
         android:id="@+id/math_10_ope_result_resultats"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="page resultat"
+        android:text="nombre de réponses"
         android:layout_below="@id/math_10_ope_result_avis1"
+        android:textSize="25sp"
         android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="40dp"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/math_10_ope_result_texteAutresOptions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
         android:layout_marginTop="20dp"
-        ></TextView>
+        android:textSize="25sp"
+        android:gravity="center"
+        android:layout_below="@+id/math_10_ope_result_resultats"
+        android:text="Clique sur l'un des boutons suivants pour continuer"/>
 
     <Button
         android:id="@+id/math_10_ope_result_refaire"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="REFAIRE L'EXO?"
+        android:text="REFAIRE L'EXERCICE"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/math_10_ope_result_resultats"
+        android:layout_below="@+id/math_10_ope_result_texteAutresOptions"
         android:layout_marginTop="30dp"
         android:onClick="onRefaireExo"
         >
@@ -40,9 +52,20 @@
         android:id="@+id/math_10_ope_result_changer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="CHANGER D'EXO"
+        android:text="Autre exercice de mathématiques"
         android:layout_below="@id/math_10_ope_result_refaire"
+        android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
-        ></Button>
+        android:onClick="onAutreExerciceMaths"
 
+        ></Button>
+    <Button
+        android:id="@+id/math_10_ope_result_menuPrincipal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Retour au menu principal"
+        android:layout_below="@id/math_10_ope_result_changer"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:onClick="onMenuPrincipal" />
 </RelativeLayout>

@@ -56,13 +56,13 @@ public class ActivityMath10Operation extends AppCompatActivity {
             {
                 //faire l'addition et adapter titre à l'addition
                 operatorView.setText("+");
-                titreView.setText("10 Additions");
+                titreView.setText("10 additions");
             }
             else
             {
                 //faire la multiplication
                 operatorView.setText("x");
-                titreView.setText("10 Multiplications");
+                titreView.setText("10 multiplications");
             }
 
             //le bouton est lié et on lie clickListener dessus
@@ -77,7 +77,7 @@ public class ActivityMath10Operation extends AppCompatActivity {
         String resultatS = resultatView.getText().toString().trim();
 
         if (resultatS.isEmpty()){
-            Toast.makeText(getApplicationContext(), "N'oublies pas ton résultat !!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "N'oublie pas ton résultat !!", Toast.LENGTH_SHORT).show();
         }
 
         else if (compteur < 10) {

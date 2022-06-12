@@ -23,7 +23,7 @@ public class ActivityMathCalculMentalResultat extends AppCompatActivity {
         // Récupération du nombre de bonnes réponses à partir de l'activité précédente et de la vue associée
         int nbBonnesReponses = getIntent().getIntExtra(NBREPONSES,0) ;
         TextView calculMentalResultat_texteResultat = (TextView) findViewById(R.id.calculMentalResultat_texteResultat) ;
-        String texte = "Tu as donné " + nbBonnesReponses + " réponses correctes" ;
+        String texte = "Tu as donné " + nbBonnesReponses + " bonnes réponses" ;
         calculMentalResultat_texteResultat.setText(texte) ;
 
         // Message d'encouragement en fonction du résultat
@@ -44,19 +44,19 @@ public class ActivityMathCalculMentalResultat extends AppCompatActivity {
         calculMentalResultat_texteEncouragement.setText(texteEncouragement) ;
     }
 
-    public void AutreExerciceCalculMental (View view) {
+    public void onAutreExerciceCalculMental (View view) {
         Intent intentionActivityMathCalculMental = new Intent (ActivityMathCalculMentalResultat.this, ActivityMathCalculMental.class) ;
         intentionActivityMathCalculMental.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP) ;
         startActivity (intentionActivityMathCalculMental) ;
     }
 
-    public void AutreExerciceMaths (View view) {
+    public void onAutreExerciceMaths (View view) {
         Intent intentionActivityMathematiques = new Intent (ActivityMathCalculMentalResultat.this, ActivityMathematiques.class) ;
         intentionActivityMathematiques.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP) ;
         startActivity (intentionActivityMathematiques) ;
     }
 
-    public void MenuPrincipal (View view) {
+    public void onMenuPrincipal (View view) {
         Intent intentionActivityMenu = new Intent (ActivityMathCalculMentalResultat.this, ActivityMenu.class) ;
         intentionActivityMenu.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP) ;
         startActivity (intentionActivityMenu) ;
