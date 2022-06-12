@@ -6,6 +6,7 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.ecoleloustics.MonApplication;
 import com.example.ecoleloustics.R;
 
 
@@ -18,6 +19,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onMenu (View view) {
+
+        // On lance le jeu en mode visiteur, l'utilisateur courant doit être initialisé à null
+        ((MonApplication) this.getApplication()).setUserCourant(null) ;
 
         // Création d'une intention
         Intent activityMenu = new Intent(MainActivity.this, ActivityMenu.class) ;

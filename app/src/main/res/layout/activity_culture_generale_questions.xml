@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityJava.ActivityCultureGeneraleQuestions"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/cultureGeneraleQuestions_vueQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:text="Long texte écrit pour prendre de la place et voir les effets des marges choisies"/>
+
+    <RadioGroup
+        android:id="@+id/cultureGeneraleQuestions_radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginHorizontal="40dp"
+        android:layout_gravity="center"
+        android:gravity=""
+        android:orientation="vertical">
+        <RadioButton android:id="@+id/cultureGeneraleQuestions_radioBouton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="premier bouton" />
+        <RadioButton android:id="@+id/cultureGeneraleQuestions_radioBouton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="deuxième bouton" />
+        <RadioButton android:id="@+id/cultureGeneraleQuestions_radioBouton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="troisième bouton" />
+    </RadioGroup>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="120dp"
+        android:text="Valider"
+        android:onClick="onValider"/>
+
+
+</LinearLayout>

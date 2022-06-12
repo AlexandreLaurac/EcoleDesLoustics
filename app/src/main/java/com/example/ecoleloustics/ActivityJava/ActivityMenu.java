@@ -7,6 +7,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.ecoleloustics.Model.db.User;
 import com.example.ecoleloustics.MonApplication;
 import com.example.ecoleloustics.R;
 
@@ -20,8 +21,15 @@ public class ActivityMenu extends AppCompatActivity {
         // On charge le XML pour créer l'arbre graphique
         setContentView(R.layout.activity_menu);
 
-        // Récupération du prénom de l'utilisateur courant et affichage d'un message de bienvenue adapté
-        String prenom = ((MonApplication) this.getApplication()).getUserCourant().getPrenom() ;
+        // Récupération de l'utilisateur courant et affichage d'un message de bienvenue adapté
+        User userCourant = ((MonApplication) this.getApplication()).getUserCourant() ;
+        String prenom ;
+        if (userCourant != null) {
+            prenom = userCourant.getPrenom() ;
+        }
+        else {
+            prenom = "cher visiteur" ;
+        }
         TextView messageIntro = (TextView) findViewById (R.id.menu_messageIntro) ;
         String message = "Bonjour " + prenom + " !" ;
         messageIntro.setText(message) ;

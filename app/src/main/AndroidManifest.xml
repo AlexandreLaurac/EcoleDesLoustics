@@ -19,32 +19,28 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ActivityJava.ActivityConnexion"></activity>
-        <activity android:name=".ActivityJava.ActivityMenu"></activity>
-        <activity android:name=".ActivityJava.ActivityCultureGenerale"></activity>
-        <activity android:name=".ActivityJava.ActivityMathematiques"></activity>
-        <activity android:name=".ActivityJava.ActivityParcours"></activity>
-        <activity android:name=".ActivityJava.ActivityInscription"></activity>
-        <activity android:name=".ActivityJava.ActivityMultiplication"></activity>
-        <activity android:name=".ActivityJava.Exercice5Activity"></activity>
-        <activity android:name=".ActivityJava.TableMultiplicationActivity"></activity>
-        <activity android:name=".ActivityJava.TableMultiplication"></activity>
-        <activity android:name=".ActivityJava.Multiplication"></activity>
-        <activity android:name=".ActivityJava.ErreurActivity"></activity>
-        <activity android:name=".ActivityJava.FelicitationActivity"></activity>
-        <activity android:name=".ActivityJava.ActivityAddition"></activity>
-        <activity android:name=".ActivityJava.TableAdditionActivity"></activity>
-        <activity android:name=".ActivityJava.TableAddition"></activity>
-        <activity android:name=".ActivityJava.Addition"></activity>
-        <activity android:name=".ActivityJava.FelicitationAdditionActivity"></activity>
-        <activity android:name=".ActivityJava.ErreurAdditionActivity"></activity>
-
-
-
-
-
-
-
+        <activity android:name=".ActivityJava.ActivityConnexion" />
+        <activity android:name=".ActivityJava.ActivityMenu" />
+        <activity android:name=".ActivityJava.ActivityCultureGenerale" />
+        <activity android:name=".ActivityJava.ActivityCultureGeneraleIntro" />
+        <activity android:name=".ActivityJava.ActivityCultureGeneraleQuestions" />
+        <activity android:name=".ActivityJava.ActivityCultureGeneraleResultats" />
+        <activity android:name=".ActivityJava.ActivityMathematiques" />
+        <activity android:name=".ActivityJava.ActivityParcours" />
+        <activity android:name=".ActivityJava.ActivityInscription" />
+        <activity android:name=".ActivityJava.ActivityMultiplication" />
+        <activity android:name=".ActivityJava.Exercice5Activity" />
+        <activity android:name=".ActivityJava.TableMultiplicationActivity" />
+        <activity android:name=".ActivityJava.TableMultiplication" />
+        <activity android:name=".ActivityJava.Multiplication" />
+        <activity android:name=".ActivityJava.ErreurActivity" />
+        <activity android:name=".ActivityJava.FelicitationActivity" />
+        <activity android:name=".ActivityJava.ActivityAddition" />
+        <activity android:name=".ActivityJava.TableAdditionActivity" />
+        <activity android:name=".ActivityJava.TableAddition" />
+        <activity android:name=".ActivityJava.Addition" />
+        <activity android:name=".ActivityJava.FelicitationAdditionActivity" />
+        <activity android:name=".ActivityJava.ErreurAdditionActivity" />
     </application>
 
 </manifest>
