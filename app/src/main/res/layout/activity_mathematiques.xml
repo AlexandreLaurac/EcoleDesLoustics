@@ -8,35 +8,52 @@
 
     <TextView
         android:id="@+id/math_menu_titre"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="Bienvenue dans la partie mathématiques!!"
-        android:layout_marginTop="20dp"
+        android:text="Bienvenue dans le portail \ndes mathématiques!!"
+        android:layout_marginTop="30sp"
+        android:textSize="30dp"
+        android:textAlignment="center"
         ></TextView>
     <TextView
-        android:id="@+id/math_menu_explicatif_exercices"
-        android:layout_width="wrap_content"
+        android:id="@+id/math_menu_explicatif1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="explicatif de la progression à avoir et présentation des exercices"
+        android:text="L'objectif est de t'apprendre à réaliser de tête des additions et des multiplications."
         android:layout_centerHorizontal="true"
+        android:textSize="20dp"
         android:layout_below="@+id/math_menu_titre"
-        ></TextView>
-
+        android:textAlignment="center"
+        android:layout_marginTop="30dp"
+        >
+    </TextView>
+    <TextView
+        android:id="@+id/math_menu_explicatif2"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Commences par t'entraîner avec les tables. Puis passes aux 10 opérations (additions et multiplications).\nSi tu es motivé, tu peux passer au calcul mental chronométré!"
+        android:textSize="15dp"
+        android:textAlignment="center"
+        android:layout_below="@id/math_menu_explicatif1"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        >
+    </TextView>
     <Button
         android:id="@+id/math_menu_table_addi"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:text="TABLE D'ADDITION"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
-        android:layout_below="@+id/math_menu_explicatif_exercices"
+        android:layout_below="@+id/math_menu_explicatif2"
         android:onClick="onTableAddition"
         ></Button>
 
     <Button
         android:id="@+id/math_menu_table_multi"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:text="TABLE DE MULTIPLICATION"
         android:layout_below="@+id/math_menu_table_addi"
@@ -46,7 +63,7 @@
 
     <Button
         android:id="@+id/math_menu_10_addi"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:text="10 ADDITIONS"
         android:layout_below="@+id/math_menu_table_multi"
@@ -56,7 +73,7 @@
 
     <Button
         android:id="@+id/math_menu_10_multi"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:text="10 MULTIPLICATIONS"
         android:layout_below="@+id/math_menu_10_addi"
@@ -66,7 +83,7 @@
 
     <Button
         android:id="@+id/math_menu_calcul_mental"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:text="CALCUL MENTAL"
         android:layout_below="@+id/math_menu_10_multi"

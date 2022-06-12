@@ -33,7 +33,7 @@
         android:id="@+id/accueil_explication_option"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:text="Si tu as déjà un compte ou que tu veux t'inscrire, cliques sur connexion. Sinon si tu ne veux pas défis, cliques sur visiteur."
+        android:text="Si tu as déjà un compte ou que tu veux t'inscrire, cliques sur connexion. Sinon cliques sur  visiteur."
         android:layout_below="@id/explicatif_accueil"
         android:textSize="15dp"
         android:textAlignment="center"
