@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:textSize="30sp"
-        android:text="Bienvenu jerome"/>
+        android:text="Bonjour jerome"/>
 
     <TextView
         android:id="@+id/menu_explicatif"
