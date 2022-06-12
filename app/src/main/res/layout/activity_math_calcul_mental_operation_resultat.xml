@@ -3,11 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivityJava.ActivityMath10Operation"
+    tools:context=".ActivityJava.ActivityMathCalculMentalOpResult"
     >
 
     <TextView
-        android:id="@+id/math_10_ope_result_avis1"
+        android:id="@+id/math_mental_result_avis1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="page resultat"
@@ -16,31 +16,31 @@
         ></TextView>
 
     <TextView
-        android:id="@+id/math_10_ope_result_resultats"
+        android:id="@+id/math_mental_result_resultats"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="page resultat"
-        android:layout_below="@id/math_10_ope_result_avis1"
+        android:layout_below="@id/math_mental_result_avis1"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         ></TextView>
 
     <Button
-        android:id="@+id/math_10_ope_result_refaire"
+        android:id="@+id/math_mental_result_refaire"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="REFAIRE L'EXO?"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/math_10_ope_result_resultats"
+        android:layout_below="@+id/math_mental_result_resultats"
         android:layout_marginTop="30dp"
         android:onClick="onRefaireExo"
         ></Button>
     <Button
-        android:id="@+id/math_10_ope_result_changer"
+        android:id="@+id/math_mental_result_changer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="CHANGER D'EXO"
-        android:layout_below="@id/math_10_ope_result_refaire"
+        android:layout_below="@id/math_mental_result_refaire"
         android:layout_centerHorizontal="true"
         ></Button>
 

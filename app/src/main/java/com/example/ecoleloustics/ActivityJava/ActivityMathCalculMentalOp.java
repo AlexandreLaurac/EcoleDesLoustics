@@ -131,8 +131,8 @@ public class ActivityMathCalculMentalOp extends AppCompatActivity {
 
             @Override
             public void onFinish() {
-                timeView.setText("C'est fini");
-                Intent finOperation = new Intent(ActivityMathCalculMentalOp.this, ActivityMathCalculMental.class);
+                timeView.setText("Fin du temps");
+                Intent finOperation = new Intent(ActivityMathCalculMentalOp.this, ActivityMathCalculMentalOpResult.class);
                 //finOperation.putExtra(ActivityMath10OperationResultat.RESULT_KEY, repJuste);
                 startActivity(finOperation);
             }
