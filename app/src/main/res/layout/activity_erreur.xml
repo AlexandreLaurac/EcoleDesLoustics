@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,36 +8,55 @@
     android:orientation="vertical">
 
     <TextView
+        android:id="@+id/erreur_multi_titre"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:gravity="center"
         android:textSize="28sp"
         android:textColor="#f00020 "
-        android:text="Le resultat"/>
-
+        android:text="L'exercice n'est acquis !"
+        android:layout_centerHorizontal="true"
+        />
+    <TextView
+        android:id="@+id/erreur_multi_explic"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="Tu as réalisée quelques erreurs. Tu peux retourner sur la table pour corriger ou repartir. "
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/erreur_multi_titre"
+        >
+    </TextView>
     <TextView
         android:id="@+id/erreur_NombreErreurs"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:gravity="center"
-        android:text="erreur2"/>
+        android:text="erreur2"
+        android:textSize="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/erreur_multi_explic"
+        />
 
     <Button
+        android:id="@+id/erreur_multi_correction"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="Corriger vos erreurs"
-        android:onClick="erreurCorrigerErreurs"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="50dp"/>
+        android:onClick="erreurCorrigerErreurs"
+        android:layout_below="@+id/erreur_NombreErreurs"
+        android:layout_centerHorizontal="true"
+        />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="Refaire une table?"
-        android:onClick="erreurChoisirTable"/>
+        android:onClick="erreurChoisirTable"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/erreur_multi_correction"/>
 
-</LinearLayout>
+</RelativeLayout>

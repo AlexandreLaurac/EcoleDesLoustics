@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,33 +8,47 @@
     android:orientation="vertical">
 
     <TextView
+        android:id="@+id/titre_felicit"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:gravity="center"
         android:textSize="28sp"
         android:textColor="#008000"
-        android:text="Toutes mes félicitations"/>
+        android:text="Exercice réussie !!"/>
 
     <TextView
+        android:id="@+id/addi_felici_explic"
         android:layout_width="match_parent"
-        android:layout_height="40dp"/>
+        android:layout_height="40dp"
+        android:textSize="15dp"
+        android:text="Tu as réussi entièrement cette table. Tu peux la refaire ou t'entrainer sur d'autres exercices."
+        android:textAlignment="center"
+        android:layout_below="@id/titre_felicit"
+        android:layout_marginTop="20dp"
+        />
 
     <Button
-        android:layout_width="wrap_content"
+        android:id="@+id/addi_felici_refaire_exo"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Refaire une table?"
-        android:onClick="felicitationChoisirTable"></Button>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="50dp"/>
+        android:text="Refaire la table d'addition?"
+        android:onClick="felicitationChoisirTable"
+        android:layout_below="@id/addi_felici_explic"
+        android:layout_centerHorizontal="true"
+        >
+    </Button>
 
     <Button
-        android:layout_width="wrap_content"
+        android:id="@+id/addi_felici_autre_exo"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="Choix d'un autre exercice"
-        android:onClick="felicitationChoisirExercice"></Button>
+        android:layout_below="@+id/addi_felici_refaire_exo"
+        android:onClick="felicitationChoisirExercice"
+        android:layout_centerHorizontal="true"
+        >
+    </Button>
 
-</LinearLayout>
+</RelativeLayout>
