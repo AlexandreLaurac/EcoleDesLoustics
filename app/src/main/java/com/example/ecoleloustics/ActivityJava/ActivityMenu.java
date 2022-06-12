@@ -18,6 +18,7 @@ public class ActivityMenu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
         // On charge le XML pour créer l'arbre graphique
         setContentView(R.layout.activity_menu);
 
