@@ -14,7 +14,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:orientation="vertical"
-        ></LinearLayout>
+        android:layout_centerHorizontal="true"
+        >
+    </LinearLayout>
 
     <Button
         android:layout_width="250dp"
@@ -22,8 +24,9 @@
         android:gravity="center"
         android:text="VALIDER"
         android:onClick="tableAdditionValider"
-        android:layout_
-
-        ></Button>
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/disposition"
+        >
+    </Button>
 
 </RelativeLayout>
