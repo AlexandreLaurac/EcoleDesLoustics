@@ -13,7 +13,7 @@ public class ActivityMultiplication extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         // On charge le XML pour créer l'arbre graphique
-        setContentView(R.layout.activity_addition);
+        setContentView(R.layout.activity_exercice5);
 
     }
 
