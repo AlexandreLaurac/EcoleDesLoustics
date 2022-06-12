@@ -24,6 +24,18 @@ public class ActivityMathematiques extends AppCompatActivity{
 
     }
 
+    public void onTableAddition(View view) {
+
+
+        Intent activityTableAddi = new Intent(ActivityMathematiques.this, ActivityAddition.class);
+        startActivity(activityTableAddi);
+    }
+
+    public void onTableMultiplication(View view) {
+        Intent activityTableMulti = new Intent(ActivityMathematiques.this, Exercice5Activity.class);
+        startActivity(activityTableMulti);
+    }
+
     //codeOperator 1 pour les additions
     public void on10Addition(View view) {
         int codeOperator = 1;

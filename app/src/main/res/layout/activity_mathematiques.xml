@@ -31,7 +31,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
         android:layout_below="@+id/math_menu_explicatif_exercices"
-
+        android:onClick="onTableAddition"
         ></Button>
 
     <Button
@@ -41,6 +41,7 @@
         android:text="TABLE DE MULTIPLICATION"
         android:layout_below="@+id/math_menu_table_addi"
         android:layout_centerHorizontal="true"
+        android:onClick="onTableMultiplication"
         ></Button>
 
     <Button
