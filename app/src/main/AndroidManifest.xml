@@ -33,19 +33,19 @@
         <activity android:name=".ActivityJava.TableMultiplicationActivity" />
         <activity android:name=".ActivityJava.TableMultiplication" />
         <activity android:name=".ActivityJava.Multiplication" />
-        <activity android:name=".ActivityJava.ErreurActivity" />
-        <activity android:name=".ActivityJava.FelicitationActivity" />
-        <activity android:name=".ActivityJava.ActivityAddition" />
-        <activity android:name=".ActivityJava.TableAdditionActivity" />
-        <activity android:name=".ActivityJava.TableAddition" />
-        <activity android:name=".ActivityJava.Addition" />
-        <activity android:name=".ActivityJava.FelicitationAdditionActivity" />
-        <activity android:name=".ActivityJava.ErreurAdditionActivity" />
-        <activity android:name=".ActivityJava.ActivityMathCalculMental"/>
-        <activity android:name=".ActivityJava.ActivityMath10Operation"/>
-        <activity android:name=".ActivityJava.ActivityMath10OperationResultat"/>
-        <activity android:name=".ActivityJava.ActivityMathCalculMentalOp"/>
-        <activity android:name=".ActivityJava.CalculMental"/>
+        <activity android:name=".ActivityJava.ErreurActivity"></activity>
+        <activity android:name=".ActivityJava.FelicitationActivity"></activity>
+        <activity android:name=".ActivityJava.ActivityAddition"></activity>
+        <activity android:name=".ActivityJava.TableAdditionActivity"></activity>
+        <activity android:name=".ActivityJava.TableAddition"></activity>
+        <activity android:name=".ActivityJava.Addition"></activity>
+        <activity android:name=".ActivityJava.FelicitationAdditionActivity" ></activity>
+        <activity android:name=".ActivityJava.ErreurAdditionActivity" ></activity>
+        <activity android:name=".ActivityJava.ActivityMathCalculMental"></activity>
+        <activity android:name=".ActivityJava.ActivityMath10Operation"></activity>
+        <activity android:name=".ActivityJava.ActivityMath10OperationResultat"></activity>
+        <activity android:name=".ActivityJava.ActivityMathCalculMentalOp"></activity>
+        <activity android:name=".ActivityJava.CalculMental"></activity>
         <activity android:name=".ActivityJava.ActivityMathCalculMentalOpResult"/>
 
 
