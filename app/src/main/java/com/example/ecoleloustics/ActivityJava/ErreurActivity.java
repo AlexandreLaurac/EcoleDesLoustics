@@ -23,7 +23,7 @@ public class ErreurActivity extends AppCompatActivity {
         // Récupération et affichage du nombre d'erreurs
         TextView erreur_NombreErreurs = findViewById (R.id.erreur_NombreErreurs) ;
         int nbErreurs = getIntent().getIntExtra(ERREUR_KEY,9) ;
-        String message = "Nommbre d'erreurs : " + nbErreurs ;
+        String message = "Nombre d'erreurs : " + nbErreurs ;
         erreur_NombreErreurs.setText(message) ;
     }
 

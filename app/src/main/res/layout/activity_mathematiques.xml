@@ -1,69 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivityJava.ActivityMathematiques"
-    android:orientation="vertical">
-
-    <TextView
-        android:id="@+id/titre_math_menu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="MATHEMATIQUES"
-        />
-    <RelativeLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="20dp"
-    android:layout_marginLeft="40dp"
-    android:onClick="onMultiplication"
+    tools:context=".MainActivity"
     >
 
-    <ImageButton
-        android:id="@+id/image_multipli"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_baseline_1x_mobiledata_24"
-        ></ImageButton>
-
     <TextView
-        android:id="@+id/intit_multipli"
+        android:id="@+id/math_menu_titre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="MULTIPLICATION"
-        android:layout_toRightOf="@+id/image_multipli"
-        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:text="Bienvenue dans la partie mathématiques!!"
+        android:layout_marginTop="20dp"
+        ></TextView>
+    <TextView
+        android:id="@+id/math_menu_explicatif_exercices"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="explicatif de la progression à avoir et présentation des exercices"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/math_menu_titre"
         ></TextView>
 
-    </RelativeLayout>
-
-    <RelativeLayout
+    <Button
+        android:id="@+id/math_menu_table_addi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="40dp"
-        android:onClick="onAddition"
-        >
+        android:text="TABLE D'ADDITION"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/math_menu_explicatif_exercices"
 
-        <ImageButton
-            android:id="@+id/image_addi"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_baseline_exposure_plus_2_24"
-            ></ImageButton>
+        ></Button>
 
-        <TextView
-            android:id="@+id/intit_addi"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ADDITION"
-            android:layout_toRightOf="@+id/image_addi"
-            android:layout_centerInParent="true"
-            ></TextView>
+    <Button
+        android:id="@+id/math_menu_table_multi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TABLE DE MULTIPLICATION"
+        android:layout_below="@+id/math_menu_table_addi"
+        android:layout_centerHorizontal="true"
+        ></Button>
 
-    </RelativeLayout>
+    <Button
+        android:id="@+id/math_menu_10_addi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10 ADDITIONS"
+        android:layout_below="@+id/math_menu_table_multi"
+        android:layout_centerHorizontal="true"
+        android:onClick="on10Addition"
+        ></Button>
 
+    <Button
+        android:id="@+id/math_menu_10_multi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10 MULTIPLICATIONS"
+        android:layout_below="@+id/math_menu_10_addi"
+        android:layout_centerHorizontal="true"
+        android:onClick="on10Multiplication"
+        ></Button>
 
-</LinearLayout>
+    <Button
+        android:id="@+id/math_menu_calcul_mental"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CALCUL MENTAL"
+        android:layout_below="@+id/math_menu_10_multi"
+        android:layout_centerHorizontal="true"
+        android:onClick="onCalculMental"
+        ></Button>
+
+</RelativeLayout>
