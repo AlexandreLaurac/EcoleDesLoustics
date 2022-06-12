@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityJava.ActivityMathCalculMentalOp"
+    >
+
+    <TextView
+        android:id="@+id/math_mental_type_op"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:layout_marginLeft="10dp"
+        android:text="type operation"
+        android:layout_centerHorizontal="true"
+        ></TextView>
+
+    <TextView
+        android:id="@+id/math_mental_compteur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10 justes"
+        android:textSize="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="50dp"
+        android:layout_below="@id/math_mental_type_op"
+        ></TextView>
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:textSize="30dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/math_mental_type_op"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@id/math_mental_compteur"
+        android:layout_alignBaseline="@id/math_mental_compteur"
+        ></TextView>
+<!--
+    <Chronometer
+        android:id="@+id/chrono"
+        android:layout_width="wrap_content"
+        android:textSize="30dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/math_mental_type_op"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@id/math_mental_compteur"
+        android:layout_alignBaseline="@id/math_mental_compteur"
+        ></Chronometer>
+-->
+    <RelativeLayout
+        android:id="@+id/ensembOpe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@id/math_mental_compteur"
+        >
+
+        <TextView
+            android:id="@+id/math_mental_first_op"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:layout_marginLeft="60dp"
+            android:text="op1"
+            android:layout_alignBaseline="@id/math_mental_resultat"
+            ></TextView>
+
+
+        <TextView
+            android:id="@+id/math_mental_operator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" + "
+            android:textSize="30dp"
+            android:layout_toRightOf="@id/math_mental_first_op"
+            android:layout_alignBaseline="@id/math_mental_resultat"
+            ></TextView>
+
+        <TextView
+            android:id="@+id/math_mental_second_op"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="op2"
+            android:textSize="30dp"
+            android:layout_toRightOf="@id/math_mental_operator"
+            android:layout_alignBaseline="@id/math_mental_resultat"
+            ></TextView>
+
+        <TextView
+            android:id="@+id/math_mental_egal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" = "
+            android:textSize="30dp"
+            android:layout_toRightOf="@id/math_mental_second_op"
+            android:layout_centerInParent="true"
+            ></TextView>
+        <EditText
+            android:id="@+id/math_mental_resultat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="\?"
+            android:inputType="number"
+            android:textSize="25sp"
+            android:layout_toRightOf="@+id/math_mental_egal"
+            ></EditText>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/math_calcul_mental_valider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VALIDER"
+        android:layout_below="@+id/ensembOpe"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClick"
+        ></Button>
+    <TextView
+        android:id="@+id/math_calcul_mental_vide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/math_calcul_mental_valider"
+        android:text=""
+        android:textSize="30dp"
+        android:layout_centerHorizontal="true"
+        ></TextView>
+
+</RelativeLayout>
