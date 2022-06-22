@@ -48,7 +48,7 @@ public class ActivityMathCalculMentalOp extends AppCompatActivity {
 
         //compteur initiliser à 1 car methode genere pas encore initialiser
         TextView compteurView = (TextView) findViewById(R.id.math_mental_compteur);
-        compteurView.setText("0");
+        compteurView.setText("Nombre de calculcs corrects : 0");
 
         //adapter le titre
         TextView titreView = (TextView) findViewById(R.id.math_mental_type_op);
@@ -61,13 +61,13 @@ public class ActivityMathCalculMentalOp extends AppCompatActivity {
         {
             //faire l'addition et adapter titre à l'addition
             operatorView.setText("+");
-            titreView.setText("Calcul mental Additions");
+            titreView.setText("Calcul mental additions");
         }
         else
         {
             //faire la multiplication
             operatorView.setText("x");
-            titreView.setText("Calcul mental Multiplications");
+            titreView.setText("Calcul mental multiplications");
         }
         TextView timeView = (TextView) findViewById(R.id.time);
         timeView.setText("60");
@@ -84,7 +84,7 @@ public class ActivityMathCalculMentalOp extends AppCompatActivity {
         String resultatMentS = resultatView.getText().toString().trim();
 
         if (resultatMentS.isEmpty()){
-            Toast.makeText(ActivityMathCalculMentalOp.this, "N'oublies pas ton résultat !!", Toast.LENGTH_LONG).show();
+            Toast.makeText(ActivityMathCalculMentalOp.this, "N'oublie pas ton résultat !!", Toast.LENGTH_SHORT).show();
         }
         else if (siJuste(resultatMentS)){
             genere();
@@ -126,14 +126,14 @@ public class ActivityMathCalculMentalOp extends AppCompatActivity {
         countDownTimer  = new CountDownTimer(60 * 1000, 1000){
             @Override
             public void onTick(long millisUntilFinished) {
-                timeView.setText("" + millisUntilFinished / 1000 + " sec rest");
+                timeView.setText("" + millisUntilFinished / 1000);
             }
 
             @Override
             public void onFinish() {
-                timeView.setText("Fin du temps");
-                Intent finOperation = new Intent(ActivityMathCalculMentalOp.this, ActivityMathCalculMentalOpResult.class);
-                //finOperation.putExtra(ActivityMath10OperationResultat.RESULT_KEY, repJuste);
+                timeView.setText("C'est fini");
+                Intent finOperation = new Intent(ActivityMathCalculMentalOp.this, ActivityMathCalculMentalResultat.class);
+                finOperation.putExtra(ActivityMathCalculMentalResultat.NBREPONSES, repJuste);
                 startActivity(finOperation);
             }
         };
@@ -151,14 +151,14 @@ public class ActivityMathCalculMentalOp extends AppCompatActivity {
             //affiche l'incrementation le compteur
             TextView CompteurView = (TextView) findViewById(R.id.math_mental_compteur);
             String compteurS = String.valueOf(repJuste);
-            CompteurView.setText(compteurS + "");
-            Toast.makeText(getApplicationContext(), "REPONSE BONNE!!" , Toast.LENGTH_LONG).show();
+            CompteurView.setText("Nombre de calculs corrects : " + compteurS);
+            Toast.makeText(getApplicationContext(), "REPONSE CORRECTE !" , Toast.LENGTH_SHORT).show();
             etatRep = true;
         }
         else
         {
 
-            Toast.makeText(getApplicationContext(), "REPONSE FAUSSE!!\nRecommences", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "REPONSE FAUSSE !\nRecommence", Toast.LENGTH_SHORT).show();
 
         }
         return etatRep;
