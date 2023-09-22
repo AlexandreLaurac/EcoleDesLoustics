@@ -1,7 +1,10 @@
-# ecoleLoustics
+# L'école des loustics
 
-Projet universitaire portant sur le développement d'une application mobile à but pédagogique.
+Projet de développement d'une application mobile Android à but pédagogique proposant exercices de mathématiques et de culture générale.
 
-Le développement a été réalisé sur AndroidStudio avec comme langage Java.
+Travail réalisé en équipe de 2 personnes aux mois de mai et juin 2022 dans le cadre du module "Conception et développement d'applications mobiles" du DUT d'informatique en année spéciale.
 
-Ce projet universitaire a été conçu en équipe de 2 personnes au mois de juin 2022.
+Le développement a été effectué sous Android Studio en Java et XML.
+
+Voir l'énoncé et le rapport rendu pour plus de détails.
+
